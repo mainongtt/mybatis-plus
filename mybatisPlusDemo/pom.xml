@@ -12,6 +12,7 @@
     <artifactId>mybatisPlusDemo</artifactId>
 
     <dependencies>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -57,7 +58,7 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
-
-
+    
 </project>

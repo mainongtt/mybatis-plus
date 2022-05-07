@@ -9,6 +9,7 @@ spring:
     username: root
     password: root
 mybatis-plus:
+  # mapper-locations: classpath:xx/xx/xx/xx/mapper/*.xml
   # 输入日志文件
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
@@ -20,6 +21,7 @@ mybatis-plus:
       # 设置统一的主键生成策略
       id-type: auto
   # 配置类型别名所对应的包
-  type-aliases-package: com.my.mybatisplus.pojo
+  type-aliases-package: com.my.mybatisplus.entity
   # 扫描通用枚举的包
-  type-enums-package: com.my.mybatisplus.enums
+  #type-enums-package: com.my.mybatisplus.enums
+

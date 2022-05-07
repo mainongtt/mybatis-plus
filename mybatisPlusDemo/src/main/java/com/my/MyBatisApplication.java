@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.my.mapper")
+@MapperScan("com.my")
 public class MyBatisApplication {
     public static void main(String[] args) {
         SpringApplication.run(MyBatisApplication.class, args);
