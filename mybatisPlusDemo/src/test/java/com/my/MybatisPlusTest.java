@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
+import com.my.enums.SexEnmu;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class MybatisPlusTest {
@@ -60,4 +60,14 @@ public class MybatisPlusTest {
         System.out.println("影响的行数" + delete);
     }
 
+    @Test
+    public void testSexEnum(){
+        User user = new User();
+        user.setName("Enum");
+        user.setAge(20);
+        user.setSex(SexEnmu.MALE.getSex());
+
+        int update = userMapper.update(user, null);
+        System.out.println("受影响的行数为 ： " + update);
+    }
 }

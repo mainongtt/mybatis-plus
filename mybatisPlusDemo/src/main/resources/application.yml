@@ -1,13 +1,22 @@
 spring:
   # 配置数据源信息
   datasource:
-    # 配置数据源类型
-    type: com.zaxxer.hikari.HikariDataSource
-    # 配置连接数据库的各个信息
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mybatis_plus?characterEncoding=utf-8&userSSL=false&serverTimezone=GMT
-    username: root
-    password: root
+    dynamic:
+      primary: master
+      strict: false
+      datasource:
+        master:
+          # 配置连接数据库的各个信息
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/mybatis_plus?characterEncoding=utf-8&userSSL=false&serverTimezone=GMT
+          username: root
+          password: root
+        slave_1:
+          # 配置连接数据库的各个信息
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://localhost:3306/mybatis_plus1?characterEncoding=utf-8&userSSL=false&serverTimezone=GMT
+          username: root
+          password: root
 mybatis-plus:
   # mapper-locations: classpath:xx/xx/xx/xx/mapper/*.xml
   # 输入日志文件
@@ -23,5 +32,5 @@ mybatis-plus:
   # 配置类型别名所对应的包
   type-aliases-package: com.my.mybatisplus.entity
   # 扫描通用枚举的包
-  #type-enums-package: com.my.mybatisplus.enums
+  type-enums-package: com.my.enums
 

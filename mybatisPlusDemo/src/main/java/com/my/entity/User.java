@@ -15,6 +15,7 @@ public class User {
     private Long id;
     @TableField("name")
     private String name;
+    private Integer sex;
     private Integer age;
     private String email;
 
